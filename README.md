@@ -1,4 +1,4 @@
-# Docker-Chess
+# Docker Chess
 
 Docker Chess is a containerized application for [Scid vs. PC](http://scidvspc.sourceforge.net/).
 

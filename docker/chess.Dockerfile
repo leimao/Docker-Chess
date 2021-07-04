@@ -22,7 +22,7 @@ RUN cd /tmp/ && \
     rm scid_vs_pc-4.22.tgz && \
     cd scid_vs_pc-4.22 && \
     ./configure && \
-    make -j && \
+    make -j8 && \
     make install
 
 RUN rm -rf /tmp/scid_vs_pc-4.22

@@ -12,11 +12,20 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         tk \
         tk-dev \
         wget \
-        unzip
+        unzip \
+        fontconfig \
+        libgtk2.0 \
+        libcanberra-gtk-module \
+        libcanberra-gtk3-module \
+        chessx \
+        pulseaudio
 RUN apt-get clean
 
+RUN ln -s /usr/games/chessx /usr/local/bin/chessx
+
 # Scid vs. PC
-RUN cd /tmp/ && \
+RUN mkdir -p /tmp/scid_vs_pc && \
+    cd /tmp/scid_vs_pc/ && \
     wget https://gigenet.dl.sourceforge.net/project/scidvspc/source/scid_vs_pc-4.22.tgz && \
     tar -xzf scid_vs_pc-4.22.tgz && \
     rm scid_vs_pc-4.22.tgz && \
@@ -25,7 +34,7 @@ RUN cd /tmp/ && \
     make -j8 && \
     make install
 
-RUN rm -rf /tmp/scid_vs_pc-4.22
+RUN rm -rf /tmp/scid_vs_pc
 
 COPY config/engines.dat /root/.scidvspc/config/engines.dat
 
@@ -46,4 +55,9 @@ RUN rm -rf /tmp/stockfish
 #     wget http://caissabase.co.uk/downloads/Caissabase_2020_11_14.zip && \
 #     unzip Caissabase_2020_11_14.zip
 
-ENTRYPOINT ["scid"]
+CMD ["bash", "-c" "pulseaudio --start; chessx"]
+
+# ENTRYPOINT ["scid"]
+
+
+# wget https://phoenixnap.dl.sourceforge.net/project/lucaschessr/Version_R1/LucasChessR126_LINUX.sh

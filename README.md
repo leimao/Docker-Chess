@@ -1,5 +1,7 @@
 # Docker Chess
 
+## Introduction
+
 Docker Chess is a containerized application for [Scid vs. PC](http://scidvspc.sourceforge.net/). [Stockfish 14](https://stockfishchess.org/) chess engine has been configured.
 
 ## Usages

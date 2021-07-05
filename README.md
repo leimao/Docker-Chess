@@ -24,7 +24,7 @@ $ xhost -
 
 ### Mount Chess Database
 
-We could also mount the external chess database to the Docker container and load it in Scid vs. PC. For example, to mount the [Caïssabase](http://caissabase.co.uk/) to the Docker container, please run the following command in the terminal.
+We could also mount the external chess database to the Docker container and load it in Scid vs. PC. For example, to mount the [Caïssabase](http://caissabase.co.uk/) chess database to the Docker container, please run the following command in the terminal.
 
 ```
 $ mkdir -p /tmp/caissabase/

@@ -39,3 +39,6 @@ $ docker run -it --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v /t
 $ xhost -
 ```
 
+## References
+
+* [Chess on Linux](https://leimao.github.io/blog/Linux-Chess/)

@@ -29,7 +29,7 @@ We could also mount the external chess database to the Docker container and load
 ```
 $ mkdir -p /tmp/caissabase/
 $ cd /tmp/caissabase/
-$ wget http://caissabase.co.uk/downloads/Caissabase_2020_11_14.zip && \
+$ wget http://caissabase.co.uk/downloads/Caissabase_2020_11_14.zip
 $ unzip Caissabase_2020_11_14.zip
 $ rm Caissabase_2020_11_14.zip
 $ xhost +
